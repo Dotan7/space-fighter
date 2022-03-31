@@ -1,0 +1,359 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+}
+
+#board {
+  height: 100vh;
+  margin: 0%;
+  padding: 0%;
+  background-color: rgb(0, 0, 0);
+}
+
+#popPage {
+  height: 100vh;
+  display: flex;
+  background-color: rgba(223, 21, 21, 0);
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.instrutionsDiv {
+  height: 50%;
+  width: 50%;
+  position: absolute;
+  top: -10px;
+}
+
+.bgInstrutions {
+  background-image: url("assets/instructions.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: contain;
+}
+
+#popUp {
+  z-index: 1;
+  background-color: rgba(123, 183, 233, 0.5);
+  padding: 1%;
+  margin: 1%;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#openForm {
+  text-align: center;
+  padding: 0;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  cursor: default;
+}
+
+#msg {
+  padding: 0;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-weight: bolder;
+}
+
+#msgB {
+  padding: 0;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-weight: bolder;
+}
+
+#msgC {
+  padding: 0;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-weight: bolder;
+}
+
+#nameInputI {
+  padding: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  text-align: center;
+  border-radius: 15px;
+}
+
+#startGameBtn {
+  padding: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: rgba(123, 183, 233, 0.5);
+  border-color: white;
+}
+
+#finishTheGameBtn {
+  padding: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: rgba(123, 183, 233, 0.5);
+  border-color: white;
+}
+
+#gameOverBtn {
+  padding: 2%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: rgba(123, 183, 233, 0.5);
+  border-color: white;
+}
+
+/* ////////// -- GAME -- ////////// */
+
+#player {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-image: url(assets/plainUp.png);
+  background-size: 100% 100%;
+  visibility: hidden;
+}
+
+#shot {
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  background-color: red;
+  margin: 0%;
+  padding: 0%;
+}
+
+#topRowInfo {
+  display: flex;
+  padding: 0.5%;
+  justify-content: space-between;
+  visibility: hidden;
+}
+
+#leftInfo {
+  margin: 0;
+  padding: 0;
+  inline-size: 19%;
+}
+
+#lifeMonitorWrap {
+  width: 100%;
+  border: solid 1px white;
+}
+
+#lifeMonitor {
+  background-color: rgb(21, 255, 0);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 5px;
+}
+
+#playerNameText {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+}
+
+#speedInfoDiv {
+  margin: 0;
+  padding: 0;
+  inline-size: 19%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: visible;
+}
+
+#speedMonitorWrap {
+  width: 100%;
+  border: solid 1px white;
+  padding: 0;
+  margin: 0;
+}
+
+#speedMonitor {
+  background-color: rgb(52, 194, 255);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 5px;
+}
+
+#speedMonitorText {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: small;
+}
+
+#shotsRateInfoDiv {
+  margin: 0;
+  padding: 0;
+  inline-size: 19%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  visibility: visible;
+}
+
+#shotsRatesMonitorWrap {
+  width: 100%;
+  border: solid 1px white;
+  padding: 0;
+  margin: 0;
+}
+
+#shotsRatesMonitor {
+  background-color: rgb(255, 174, 52);
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 5px;
+}
+
+#shotsRatesMonitorText {
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: small;
+}
+
+#middleInfo {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  inline-size: 19%;
+}
+
+.tools {
+  width: 100%;
+  height: 100%;
+}
+
+#healthDiv {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  border: solid 1px white;
+}
+
+.bgHealth {
+  background-image: url("assets/medkit.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: contain;
+}
+
+#healthDivSpan {
+  position: absolute;
+  top: 7%;
+}
+
+#shieldDiv {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  border: solid 1px white;
+}
+
+.bgShield {
+  background-image: url("assets/shield.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: contain;
+}
+
+#shieldDivSpan {
+  position: absolute;
+  top: 7%;
+}
+
+#speedDiv {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  border: solid 1px white;
+}
+
+.bgSpeed {
+  background-image: url("assets/speedometer.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: contain;
+}
+
+#speedDivSpan {
+  position: absolute;
+  top: 7%;
+}
+
+#shotRateDiv {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  border: solid 1px white;
+}
+
+.bgshotRate {
+  background-image: url("assets/bullets.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  object-fit: contain;
+}
+
+#shotRateDivSpan {
+  position: absolute;
+  top: 7%;
+}
+
+.present {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin: 0%;
+  padding: 0%;
+}
+
+#scoreDivInfo {
+  margin: 0;
+  padding: 0;
+  inline-size: 19%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#scoreDivText {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+}

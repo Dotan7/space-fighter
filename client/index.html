@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Space War</title>
+    <link rel="icon" type="image/x-icon" href="./assets/plainUp.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="board" class="boardC">
+      <div id="player" class="playerC"></div>
+
+      <div id="topRowInfo" class="topRowInfoC">
+        <div id="leftInfo" class="leftInfoC">
+          <div id="lifeMonitorWrap" class="lifeMonitorWrap">
+            <div id="lifeMonitor" class="lifeMonitorC"></div>
+          </div>
+
+          <span id="playerNameText" class="playerNameTextC"></span>
+        </div>
+
+        <div id="speedInfoDiv" class="speedInfoDivC">
+          <div id="speedMonitorWrap" class="speedMonitorWrap">
+            <div id="speedMonitor" class="speedMonitorC"></div>
+          </div>
+
+          <span id="speedMonitorText" class="speedMonitorTextC"
+            >Speed Time</span
+          >
+        </div>
+
+        <div id="middleInfo" class="middleInfoC">
+          <div id="healthDiv" class="tools bgHealth">
+            <span id="healthDivSpan" class="" style="color: white"></span>
+          </div>
+          <div id="shieldDiv" class="tools bgShield" style="color: white">
+            <span id="shieldDivSpan" class="" style="color: white">0</span>
+          </div>
+          <div id="speedDiv" class="tools bgSpeed" style="color: white">
+            <span id="speedDivSpan" class="" style="color: white">0</span>
+          </div>
+          <div id="shotRateDiv" class="tools bgshotRate" style="color: white">
+            <span id="shotRateDivSpan" class="" style="color: white">0</span>
+          </div>
+        </div>
+
+        <div id="shotsRateInfoDiv" class="shotsRateInfoDivC">
+          <div id="shotsRatesMonitorWrap" class="shotsRatesMonitorWrap">
+            <div id="shotsRatesMonitor" class="shotsRatesMonitorC"></div>
+          </div>
+
+          <span id="shotsRatesMonitorText" class="shotsRatesMonitorTextC"
+            >Shots Time</span
+          >
+        </div>
+
+        <div id="scoreDivInfo" class="scoreDivInfoC">
+          <span id="scoreDivText" class="">Score: 1,975</span>
+        </div>
+      </div>
+
+      <div id="popPage" class="popPageC">
+        <div id="instrutionsDivId" class="instrutionsDiv bgInstrutions"></div>
+        <div id="popUp" class="popUpC">
+          <p id="msg" class="msgC">Welcome to Space-Fighter</p>
+
+          <p id="msgB" class="msgBC">Please enter your name:</p>
+
+          <form type="submit" id="openForm" class="">
+            <input
+              type="text"
+              name="nameInput"
+              id="nameInputI"
+              class="nameInputC"
+            />
+
+            <br />
+
+            <button id="startGameBtn" class="startGameBtnC">Start Game</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="code.js"></script>
+  </body>
+</html>
